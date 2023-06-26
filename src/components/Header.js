@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const productData = useSelector((state) => state.shop.productData);
   const userInfo = useSelector((state) => state.shop.userInfo);
-  console.log(userInfo)
+  console.log(userInfo);
   return (
     <div className="w-full h-20 bg-white border-b-[1px] border-b-gray-800 font-titleFont sticky top-0 z-50">
       <div className="max-w-screen-xl h-full mx-auto flex items-center justify-between">
@@ -22,21 +22,29 @@ const Header = () => {
         </Link>
         <div className="flex items-center gap-8">
           <ul className="flex items-center gap-8">
-            <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-              Home
-            </li>
-            <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-              Pages
-            </li>
+            <Link to="/">
+              <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
+                Inicio
+              </li>
+            </Link>
+            <a href="#products-section">
+              <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
+                Productos
+              </li>
+            </a>
+            {/*
             <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
               Shop
             </li>
             <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
               Element
             </li>
-            <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-              Blog
-            </li>
+            */}
+            <a href="#footer-section">
+              <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
+                Contacto
+              </li>
+            </a>
           </ul>
           <Link to="/cart">
             <div className="relative">
@@ -51,16 +59,20 @@ const Header = () => {
             </div>
           </Link>
           <Link to="/login">
-          <img
-            className="w-8 h-8 rounded-full"
-            src={
-              userInfo?userInfo.image : "https://res.cloudinary.com/dvvzlx2na/image/upload/v1687586368/World%20of%20Warcraft%20-%20Items/Imagenes-variadas/User-Logo_yiwqgi.png"
-            }
-          />
+            <img
+              className="w-8 h-8 rounded-full"
+              src={
+                userInfo
+                  ? userInfo.image
+                  : "https://res.cloudinary.com/dvvzlx2na/image/upload/v1687586368/World%20of%20Warcraft%20-%20Items/Imagenes-variadas/User-Logo_yiwqgi.png"
+              }
+            />
           </Link>
-          {
-            userInfo && <p className="text-base font-titleFont font-semibold underline underline-offset-2">{userInfo.name}</p>
-          }
+          {userInfo && (
+            <p className="text-base font-titleFont font-semibold underline underline-offset-2">
+              {userInfo.name}
+            </p>
+          )}
         </div>
       </div>
     </div>

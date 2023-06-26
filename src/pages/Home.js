@@ -12,7 +12,9 @@ useEffect(() => {
   return (
     <div>
       <Banner />
+      <div className='w-full'>
       <Products products={products}/>
+      </div>
     </div>
   )
 }

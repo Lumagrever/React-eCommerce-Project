@@ -1,25 +1,101 @@
-import React from 'react'
-import ProductsCard from './ProductsCard'
+import React, { useState, useEffect } from 'react';
+import ProductsCard from './ProductsCard';
 
-const Products = ({products}) => {
+const Products = ({ products }) => {
+  
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('Todos');
+
+  useEffect(() => {
+    setFilteredProducts(products);
+  }, [products]);
+
+  const handleFilter = (category) => {
+    if (category === 'Todos') {
+      setFilteredProducts(products);
+    } else {
+      const filteredProducts = products.filter(
+        (item) => item.category === category
+      );
+      setFilteredProducts(filteredProducts);
+    }
+    setSelectedCategory(category);
+  };
+
   return (
     <div className='py-10'>
-        <div className='flex flex-col items-center gap-4'>
-            <h1 className='text-2x1 bg-black text-white py-2 w-80 text-center'>
-                Productos
-            </h1>
-            <span className='w-20 h-[3px] bg-black'></span>
-            <p className='max-2-[700px] text-gray-600 text-center'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quia.
-            </p>
-        </div>
-            <div className="max-w-screen-xl mx-auto py-10 grid grid-cols-4 gap-10">
-          {products?.map((item) => (
-            <ProductsCard key={item.id} product={item} />
-          ))}
-        </div>
+      <div id="products-section" className='flex flex-col items-center gap-4'>
+        <h1 className='text-2xl bg-black text-white py-2 w-80 text-center'>
+          Productos
+        </h1>
+        <span className='w-20 h-[3px] bg-black'></span>
+        <ul className='flex items-center gap-8'>
+          <li
+            className={`text-base font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 ${
+              selectedCategory === 'Todos' ? 'text-red-500' : 'text-black'
+            }`}
+            onClick={() => handleFilter('Todos')}
+          >
+            Todos
+          </li>
+          <li
+            className={`text-base font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 ${
+              selectedCategory === 'Juegos' ? 'text-red-500' : 'text-black'
+            }`}
+            onClick={() => handleFilter('Juegos')}
+          >
+            Juegos
+          </li>
+          <li
+            className={`text-base font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 ${
+              selectedCategory === 'Monturas' ? 'text-red-500' : 'text-black'
+            }`}
+            onClick={() => handleFilter('Monturas')}
+          >
+            Mascotas
+          </li>
+          <li
+            className={`text-base font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 ${
+              selectedCategory === 'Mascotas' ? 'text-red-500' : 'text-black'
+            }`}
+            onClick={() => handleFilter('Mascotas')}
+          >
+            Monturas
+          </li>
+          <li
+            className={`text-base font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 ${
+              selectedCategory === 'Transfiguraciones' ? 'text-red-500' : 'text-black'
+            }`}
+            onClick={() => handleFilter('Transfiguraciones')}
+          >
+            Transfiguraciones
+          </li>
+          <li
+            className={`text-base font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 ${
+              selectedCategory === 'Servicio de Juego' ? 'text-red-500' : 'text-black'
+            }`}
+            onClick={() => handleFilter('Servicio de Juego')}
+          >
+            Servicio de Juego
+          </li>
+          <li
+            className={`text-base font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 ${
+              selectedCategory === 'Tiempo de Juego' ? 'text-red-500' : 'text-black'
+            }`}
+            onClick={() => handleFilter('Tiempo de Juego')}
+          >
+            Tiempo de Juego
+          </li>
+          {/* Resto de las categorías */}
+        </ul>
+      </div>
+      <div className='max-w-screen-xl mx-auto py-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-10'>
+        {filteredProducts.map((item) => (
+          <ProductsCard key={item.id} product={item} />
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;

@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className='bg-black text-[#949494] py-20'>
         <div className='max-w-screen-xl mx-auto grid grid-cols-4'>
-            <div className='flex flex-col gap-7'>
+            <div id="footer-section" className='flex flex-col gap-7'>
                 <img className='w-32' src='https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592672/World%20of%20Warcraft%20-%20Items/Logo/blizz_blue_logo_ebbqaa.png' alt='LogoBlizzard'/>
                 <p className='text-white text-sm tracking-wide'>© 2023 Blizzard Entertainment, Inc.</p>
                 <img className='w-56' src='https://res.cloudinary.com/dvvzlx2na/image/upload/v1686871693/World%20of%20Warcraft%20-%20Items/Imagenes-variadas/Pay-methods2_jxrc6j.png' alt='PayMethods'/>
