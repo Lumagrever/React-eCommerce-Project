@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { getAuth, createUserWithEmailAndPassword, updateProfile} from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  updateProfile,
+} from "firebase/auth";
 import { motion } from "framer-motion";
 import { RotatingLines } from "react-loader-spinner";
 
 const Registration = () => {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
   const auth = getAuth();
   const [clientName, setClientName] = useState("");
   const [email, setEmail] = useState("");
@@ -59,7 +63,7 @@ const Registration = () => {
     }
     if (!email) {
       setErrEmail("Ingresa tu email");
-      setFirebaseErr("")
+      setFirebaseErr("");
     } else {
       if (!emailValidation(email)) {
         setErrEmail("Ingresa un email válido");
@@ -88,29 +92,29 @@ const Registration = () => {
       cPassword &&
       cPassword === password
     ) {
-        setLoading(true)
+      setLoading(true);
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-        updateProfile(auth.currentUser,{
-                displayName: clientName,
-                photoURL:
-                "https://res.cloudinary.com/dvvzlx2na/image/upload/v1687837940/World%20of%20Warcraft%20-%20Items/Productos/Tiempo-de-juego/Picture-Profile.webp",
-            });
+          updateProfile(auth.currentUser, {
+            displayName: clientName,
+            photoURL:
+              "https://res.cloudinary.com/dvvzlx2na/image/upload/v1687837940/World%20of%20Warcraft%20-%20Items/Productos/Tiempo-de-juego/Picture-Profile.webp",
+          });
           // Signed in
           const user = userCredential.user;
-          setLoading(false)
-          setSuccessMsg("Te registraste con exito!")
+          setLoading(false);
+          setSuccessMsg("Te registraste con exito!");
           setTimeout(() => {
-            navigate("/Login")
-          }, 3000)
+            navigate("/Login");
+          }, 3000);
           // ...
         })
         .catch((error) => {
           const errorCode = error.code;
-          if(errorCode.includes("auth/email-already-in-use")){
+          if (errorCode.includes("auth/email-already-in-use")) {
             setFirebaseErr("El correo ya esta en uso. Proba con otro");
           }
-          
+
           // ..
         });
       // =========== Registro de Firebase ===============
@@ -215,31 +219,29 @@ const Registration = () => {
               >
                 Continuar
               </button>
-              {
-                loading && (
-                    <div className="flex justify-center">
-                        <RotatingLines
-                        strokeColor="brown"
-                        strokeWidth="5"
-                        animationDuration="0.75"
-                         width="50"
-                         visible={true}
-                        />
-                    </div>
-                )
-              }
-              {
-                successMsg && (
-                    <div>
-                        <motion.p
-                        initial = {{ y: 10, opacity: 0}}
-                        animate = {{ y: 0, opacity: 1}}
-                        transition = {{ duration: 0.5 }}
-                        className="text-base font-titleFont font-semibold text-green-500 border-[1px] border-green-500 px-2 text-center"
-                        >{successMsg}</motion.p>
-                    </div>
-                )
-              }
+              {loading && (
+                <div className="flex justify-center">
+                  <RotatingLines
+                    strokeColor="brown"
+                    strokeWidth="5"
+                    animationDuration="0.75"
+                    width="50"
+                    visible={true}
+                  />
+                </div>
+              )}
+              {successMsg && (
+                <div>
+                  <motion.p
+                    initial={{ y: 10, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-base font-titleFont font-semibold text-green-500 border-[1px] border-green-500 px-2 text-center"
+                  >
+                    {successMsg}
+                  </motion.p>
+                </div>
+              )}
             </div>
             <div>
               <p className="text-xs text-black leading-4 mt-4">

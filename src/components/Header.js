@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -44,14 +45,6 @@ const Header = () => {
                 Productos
               </li>
             </a>
-            {/*
-            <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-              Shop
-            </li>
-            <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-              Element
-            </li>
-            */}
             <a href="#footer-section">
               <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
                 Contacto
@@ -71,24 +64,19 @@ const Header = () => {
             </div>
           </Link>
           <Link to="/login">
-          <img
-              className="w-8 h-8 rounded-full"
-              src={
-                userInfo
-                  ? userInfo.image
-                  : "https://res.cloudinary.com/dvvzlx2na/image/upload/v1687586368/World%20of%20Warcraft%20-%20Items/Imagenes-variadas/User-Logo_yiwqgi.png"
-              }
-            />
-            {userInfo ? (
-              <p className="text-sm text-orange-500 font-medium">
-                {userInfo.userName}
+          <div className="flex flex-col items-start justify-center bg-orange-400 border-black p-1 hover:bg-green-500 transition-colors duration-300 rounded">
+           {
+            userInfo ? (
+            <p className="text-sm text-black font-medium" >
+              {userInfo.userName}
               </p>
             ) : (
-              <p className="text-xs text-orange-500">Iniciar sesion</p>
+            <p>Iniciar Sesión</p>
             )}
+          </div>
           </Link>
             {userInfo && (
-              <div onClick={handleLogout} className="flex flex-col justify-center items-center  relative">
+              <div onClick={handleLogout} className=" cursor-pointer flex flex-col justify-center items-center  relative">
                  < GrLogout className="text-xl" />
               </div>
             )}

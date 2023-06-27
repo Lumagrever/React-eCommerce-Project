@@ -10,6 +10,7 @@ const Cart = () => {
   const userInfo = useSelector((state) => state.shop.userInfo);
   const [totalAmt, setTotalAmt] = useState("");
   const [payNow, setPayNow] = useState(false);
+
   useEffect(() => {
     let price = 0;
     productData.map((item) => {
@@ -18,6 +19,7 @@ const Cart = () => {
     });
     setTotalAmt(price.toFixed(2));
   }, [productData]);
+
   const handleCheckout = () => {
     if (userInfo) {
       setPayNow(true);
@@ -26,12 +28,13 @@ const Cart = () => {
     }
   };
 
-  const payment = async(token) => {
-    await axios.post("http://localhost:8000/pay",{
+  const payment = async (token) => {
+    await axios.post("http://localhost:8000/pay", {
       amount: totalAmt * 100,
       token: token,
     });
-  }
+  };
+
   return (
     <div>
       <img
@@ -62,19 +65,21 @@ const Cart = () => {
             {" "}
             Total <span className="text-xl font-bold">${totalAmt}</span>
           </p>
-          <button
-            onClick={handleCheckout}
-            className="text-base bg-black text-white w-full py-3 mt-6 hover:bg-gray-800 duration-300"
-          >
-            Ir a pagar
-          </button>
-          {payNow && (
+          {productData.length > 0 && (
+            <button
+              onClick={handleCheckout}
+              className="text-base bg-black text-white w-full py-3 mt-6 hover:bg-gray-800 duration-300"
+            >
+              Continuar
+            </button>
+          )}
+          {payNow && productData.length > 0 && (
             <div className="w-full mt-6 flex items-center justify-center">
               <StripeCheckout
                 stripeKey="pk_test_51NMbHaBsWxh2JeIEnp5HEy2V6ktpkQVWmdjGjCWr77wmoosYyx1efJZe3pwrZuMvuZWxWcW8tC9jmgytdKX6J2IC00fgMXD0qw"
                 name="WOW Shop"
                 amount={totalAmt * 100}
-                label="Pay to shop"
+                label="Ir a Pagar"
                 description={`El monto a pagar es $${totalAmt}`}
                 token={payment}
                 email={userInfo.email}
