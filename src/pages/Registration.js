@@ -129,7 +129,7 @@ const Registration = () => {
 
   return (
     <div className="w-full">
-      <div className="w-full pb-20">
+      <div className="w-full pt-20 pb-20">
         <form className="w-[370px] mx-auto flex flex-col items-center">
           <div className="w-full border border-zinc-200 p-6">
             <h2 className="font-titleFont text-3xl font-medium mb-4">

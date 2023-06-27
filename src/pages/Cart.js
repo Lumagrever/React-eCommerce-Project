@@ -54,10 +54,9 @@ const Cart = () => {
               </span>
             </p>
             <p className="flex items-start gap-4 text-base">
-              Shipping{" "}
+              Beneficios{" "}
               <span>
-                Free shipping on orders over $5000, otherwise flat rate of 8$
-                per order.
+              Contribuimos con el 2% del valor total de tu compra para llevar alimentos a los niños huerfanos de Ventormenta.
               </span>
             </p>
           </div>

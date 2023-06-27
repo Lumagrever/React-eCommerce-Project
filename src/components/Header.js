@@ -1,24 +1,43 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import {GrLogout} from "react-icons/gr"
+import { GrLogout } from "react-icons/gr";
 import { getAuth, signOut } from "firebase/auth";
 import { userSignOut } from "../redux/shopSlice";
 
 const Header = () => {
   const auth = getAuth();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const productData = useSelector((state) => state.shop.productData);
   const userInfo = useSelector((state) => state.shop.userInfo);
+
   const handleLogout = () => {
-    signOut(auth).then(() => {
-      console.log("Sign out OK");
-      dispatch(userSignOut())
-    }).catch((error) => {
-      console.log(error)
-    });
-  }
+    signOut(auth)
+      .then(() => {
+        console.log("Sign out OK");
+        dispatch(userSignOut());
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const renderUserInfo = () => {
+    if (userInfo) {
+      return (
+        <span className="flex flex-col items-start justify-center bg-orange-400 border-black p-1 hover:bg-green-500 transition-colors duration-300 rounded select-none">
+          {userInfo.userName}
+        </span>
+      );
+    } else {
+      return (
+        <Link to="/login" className="flex flex-col items-start justify-center bg-orange-400 border-black p-1 hover:bg-green-500 transition-colors duration-300 rounded">
+          Iniciar Sesión
+        </Link>
+      );
+    }
+  };
+
   return (
     <div className="w-full h-20 bg-white border-b-[1px] border-b-gray-800 font-titleFont sticky top-0 z-50">
       <div className="max-w-screen-xl h-full mx-auto flex items-center justify-between">
@@ -26,9 +45,7 @@ const Header = () => {
           <div>
             <img
               className="w-20"
-              src={
-                "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686628645/World%20of%20Warcraft%20-%20Items/Logo/World-of-Warcraft-Simple-Logo_jt0bpw.png"
-              }
+              src="https://res.cloudinary.com/dvvzlx2na/image/upload/v1686628645/World%20of%20Warcraft%20-%20Items/Logo/World-of-Warcraft-Simple-Logo_jt0bpw.png"
               alt="logoWow"
             />
           </div>
@@ -40,7 +57,7 @@ const Header = () => {
                 Inicio
               </li>
             </Link>
-            <a href="#products-section">
+            <a href="/#products-section">
               <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
                 Productos
               </li>
@@ -63,38 +80,17 @@ const Header = () => {
               </span>
             </div>
           </Link>
-          <Link to="/login">
-          <div className="flex flex-col items-start justify-center bg-orange-400 border-black p-1 hover:bg-green-500 transition-colors duration-300 rounded">
-           {
-            userInfo ? (
-            <p className="text-sm text-black font-medium" >
-              {userInfo.userName}
-              </p>
-            ) : (
-            <p>Iniciar Sesión</p>
-            )}
-          </div>
-          </Link>
+          <div className="flex items-center">
+            {renderUserInfo()}
             {userInfo && (
-              <div onClick={handleLogout} className=" cursor-pointer flex flex-col justify-center items-center  relative">
-                 < GrLogout className="text-xl" />
+              <div
+                onClick={handleLogout}
+                className="cursor-pointer flex flex-col justify-center items-center ml-2"
+              >
+                <GrLogout className="text-xl" />
               </div>
             )}
-          {/*
-            <img
-              className="w-8 h-8 rounded-full"
-              src={
-                userInfo
-                  ? userInfo.image
-                  : "https://res.cloudinary.com/dvvzlx2na/image/upload/v1687586368/World%20of%20Warcraft%20-%20Items/Imagenes-variadas/User-Logo_yiwqgi.png"
-              }
-            />
-          {userInfo && (
-            <p className="text-base font-titleFont font-semibold underline underline-offset-2">
-              {userInfo.name}
-            </p>
-          )}
-          */}
+          </div>
         </div>
       </div>
     </div>

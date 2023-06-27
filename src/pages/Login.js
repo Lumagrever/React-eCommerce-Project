@@ -75,7 +75,7 @@ export const Login = () => {
   };
   return (
     <div className="w-full">
-      <div className="w-full pb-20">
+      <div className="w-full pt-20 pb-20">
         {successMsg ? (
           <div className="w-full flex justify-center items-center py-32">
             <p className="border-[1px] border-green-600 text-green-500 font-titleFont text-lg font-semibold px-6 py-2">
