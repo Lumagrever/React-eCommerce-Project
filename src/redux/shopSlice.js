@@ -39,28 +39,35 @@ export const shopSlice = createSlice({
       const item = state.productData.find(
         (item) => item.id === action.payload.id
       );
-      if ((item.quantity === 1)) {
+      if (item.quantity === 1) {
         item.quantity = 1;
       } else {
         item.quantity--;
       }
     },
-    addUser: (state, action) => {
+    setUserInfo: (state, action) => {
       state.userInfo = action.payload;
     },
-    removeUser: (state) => {
+    userSignOut: (state) => {
       state.userInfo = null;
     },
+    //addUser: (state, action) => {
+    //  state.userInfo = action.payload;
+    //},
+    //removeUser: (state) => {
+    //  state.userInfo = null;
   },
 });
 
 export const {
-    addToCart,
-    deleteItem, 
-    resetCart,
-    incrementQuantity,
-    decrementQuantity,
-    addUser,
-    removeUser,
+  addToCart,
+  deleteItem,
+  resetCart,
+  incrementQuantity,
+  decrementQuantity,
+  setUserInfo,
+  userSignOut,
+  //addUser,
+  //removeUser,
 } = shopSlice.actions;
 export default shopSlice.reducer;

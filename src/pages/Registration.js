@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { getAuth, createUserWithEmailAndPassword, updateProfile} from "firebase/auth";
+import { motion } from "framer-motion";
+import { RotatingLines } from "react-loader-spinner";
 
 const Registration = () => {
+    const navigate = useNavigate()
+  const auth = getAuth();
   const [clientName, setClientName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,6 +17,11 @@ const Registration = () => {
   const [errEmail, setErrEmail] = useState("");
   const [errPassword, setErrPassword] = useState("");
   const [errCPassword, setErrCPassword] = useState("");
+  const [firebaseErr, setFirebaseErr] = useState("");
+
+  // Loading
+  const [loading, setLoading] = useState(false);
+  const [successMsg, setSuccessMsg] = useState("");
 
   // Validacion de Email
 
@@ -39,7 +49,7 @@ const Registration = () => {
 
   const handleCPassword = (e) => {
     setCPassword(e.target.value);
-    setErrPassword("");
+    setErrCPassword("");
   };
 
   const handleRegistration = (e) => {
@@ -49,6 +59,7 @@ const Registration = () => {
     }
     if (!email) {
       setErrEmail("Ingresa tu email");
+      setFirebaseErr("")
     } else {
       if (!emailValidation(email)) {
         setErrEmail("Ingresa un email válido");
@@ -77,12 +88,38 @@ const Registration = () => {
       cPassword &&
       cPassword === password
     ) {
+        setLoading(true)
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+        updateProfile(auth.currentUser,{
+                displayName: clientName,
+                photoURL:
+                "https://res.cloudinary.com/dvvzlx2na/image/upload/v1687837940/World%20of%20Warcraft%20-%20Items/Productos/Tiempo-de-juego/Picture-Profile.webp",
+            });
+          // Signed in
+          const user = userCredential.user;
+          setLoading(false)
+          setSuccessMsg("Te registraste con exito!")
+          setTimeout(() => {
+            navigate("/Login")
+          }, 3000)
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          if(errorCode.includes("auth/email-already-in-use")){
+            setFirebaseErr("El correo ya esta en uso. Proba con otro");
+          }
+          
+          // ..
+        });
       // =========== Registro de Firebase ===============
       setClientName("");
       setEmail("");
       setPassword("");
       setCPassword("");
       setErrCPassword("");
+      setFirebaseErr("");
     }
   };
 
@@ -128,6 +165,14 @@ const Registration = () => {
                     {errEmail}
                   </p>
                 )}
+                {firebaseErr && (
+                  <p className="text-red-600 text-xs font-semibold tracking-wide flex items-center gap-2 -mt-1.5">
+                    <span className="italic font-titleFont font-extrabold text-base">
+                      !
+                    </span>{" "}
+                    {firebaseErr}
+                  </p>
+                )}
               </div>
               <div className="flex flex-col gap-2">
                 <p className="text-sm font-medium">Contraseña</p>
@@ -170,6 +215,31 @@ const Registration = () => {
               >
                 Continuar
               </button>
+              {
+                loading && (
+                    <div className="flex justify-center">
+                        <RotatingLines
+                        strokeColor="brown"
+                        strokeWidth="5"
+                        animationDuration="0.75"
+                         width="50"
+                         visible={true}
+                        />
+                    </div>
+                )
+              }
+              {
+                successMsg && (
+                    <div>
+                        <motion.p
+                        initial = {{ y: 10, opacity: 0}}
+                        animate = {{ y: 0, opacity: 1}}
+                        transition = {{ duration: 0.5 }}
+                        className="text-base font-titleFont font-semibold text-green-500 border-[1px] border-green-500 px-2 text-center"
+                        >{successMsg}</motion.p>
+                    </div>
+                )
+              }
             </div>
             <div>
               <p className="text-xs text-black leading-4 mt-4">

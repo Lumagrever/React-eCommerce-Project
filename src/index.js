@@ -5,6 +5,7 @@ import { store, persistor } from './redux/store';
 import { PersistGate } from 'redux-persist/integration/react'
 import 'react-toastify/dist/ReactToastify.css';
 import {app} from './firebase.config';
+import firebaseConfig from './firebase.config';
 import './index.css';
 import App from './App';
 

@@ -1,11 +1,23 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import {GrLogout} from "react-icons/gr"
+import { getAuth, signOut } from "firebase/auth";
+import { userSignOut } from "../redux/shopSlice";
 
 const Header = () => {
+  const auth = getAuth();
+  const dispatch = useDispatch()
   const productData = useSelector((state) => state.shop.productData);
   const userInfo = useSelector((state) => state.shop.userInfo);
-  console.log(userInfo);
+  const handleLogout = () => {
+    signOut(auth).then(() => {
+      console.log("Sign out OK");
+      dispatch(userSignOut())
+    }).catch((error) => {
+      console.log(error)
+    });
+  }
   return (
     <div className="w-full h-20 bg-white border-b-[1px] border-b-gray-800 font-titleFont sticky top-0 z-50">
       <div className="max-w-screen-xl h-full mx-auto flex items-center justify-between">
@@ -59,6 +71,28 @@ const Header = () => {
             </div>
           </Link>
           <Link to="/login">
+          <img
+              className="w-8 h-8 rounded-full"
+              src={
+                userInfo
+                  ? userInfo.image
+                  : "https://res.cloudinary.com/dvvzlx2na/image/upload/v1687586368/World%20of%20Warcraft%20-%20Items/Imagenes-variadas/User-Logo_yiwqgi.png"
+              }
+            />
+            {userInfo ? (
+              <p className="text-sm text-orange-500 font-medium">
+                {userInfo.userName}
+              </p>
+            ) : (
+              <p className="text-xs text-orange-500">Iniciar sesion</p>
+            )}
+          </Link>
+            {userInfo && (
+              <div onClick={handleLogout} className="flex flex-col justify-center items-center  relative">
+                 < GrLogout className="text-xl" />
+              </div>
+            )}
+          {/*
             <img
               className="w-8 h-8 rounded-full"
               src={
@@ -67,12 +101,12 @@ const Header = () => {
                   : "https://res.cloudinary.com/dvvzlx2na/image/upload/v1687586368/World%20of%20Warcraft%20-%20Items/Imagenes-variadas/User-Logo_yiwqgi.png"
               }
             />
-          </Link>
           {userInfo && (
             <p className="text-base font-titleFont font-semibold underline underline-offset-2">
               {userInfo.name}
             </p>
           )}
+          */}
         </div>
       </div>
     </div>
