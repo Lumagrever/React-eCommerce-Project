@@ -13,8 +13,8 @@ import { BsPersonFill, BsPaypal } from "react-icons/bs";
 const Footer = () => {
   return (
     <div className="bg-black text-[#949494] py-20">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-4">
-        <div id="footer-section" className="flex flex-col gap-7">
+      <div className="max-w-screen-xl mx-auto px-4 md:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div id="footer-section" className="flex flex-col justify-center gap-7">
           <img
             className="w-32"
             src="https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592672/World%20of%20Warcraft%20-%20Items/Logo/blizz_blue_logo_ebbqaa.png"
@@ -29,7 +29,6 @@ const Footer = () => {
             alt="PayMethods"
           />
           <div className="flex gap-5 text-lg text-gray-400">
-            <ImGithub className="hover:text-white duration-300 cursor-pointer" />
             <FaYoutube className="hover:text-white duration-300 cursor-pointer" />
             <FaFacebookF className="hover:text-white duration-300 cursor-pointer" />
             <FaTwitter className="hover:text-white duration-300 cursor-pointer" />
@@ -37,9 +36,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h2 className="text-2x1 font-semibold text-white mb-4">
-            Contactanos
-          </h2>
+          <h2 className="text-2xl font-semibold text-white mb-4">Contactanos</h2>
           <div className="text-base flex flex-col gap-2">
             <p>Alton Parkway 16215 - Irvine | California</p>
             <p>Celular: (800) 592-5499</p>
@@ -47,7 +44,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h2 className="text-2x1 font-semibold text-white mb-4">Perfil</h2>
+          <h2 className="text-2xl font-semibold text-white mb-4">Perfil</h2>
           <div className="flex flex-col gap-2 text-base">
             <p className="flex items-center gap-3 hover:text-white duration-300 cursor-pointer">
               {" "}
@@ -66,20 +63,13 @@ const Footer = () => {
             <p className="flex items-center gap-3 hover:text-white duration-300 cursor-pointer">
               {" "}
               <span>
-                <FaHome />
-              </span>
-              {""}Order tracking
-            </p>
-            <p className="flex items-center gap-3 hover:text-white duration-300 cursor-pointer">
-              {" "}
-              <span>
                 <MdLocationOn />
               </span>
               {""}Soporte
             </p>
           </div>
         </div>
-        <div className="flex flex-col justifi-center">
+        <div className="flex flex-col justify-center">
           <input
             className="bg-transparent border px-4 py-2 text-sm"
             placeholder="e-mail"
