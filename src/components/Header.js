@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { GrLogout } from "react-icons/gr";
@@ -10,6 +10,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const productData = useSelector((state) => state.shop.productData);
   const userInfo = useSelector((state) => state.shop.userInfo);
+  const [open, setOpen] = useState(false);
 
   const handleLogout = () => {
     signOut(auth)
@@ -22,6 +23,10 @@ const Header = () => {
       });
   };
 
+  const handleMenuClick = () => {
+    setOpen(!open);
+  };
+
   const renderUserInfo = () => {
     if (userInfo) {
       return (
@@ -31,12 +36,28 @@ const Header = () => {
       );
     } else {
       return (
-        <Link to="/login" className="flex flex-col items-start justify-center bg-orange-400 border-black p-1 hover:bg-green-500 transition-colors duration-300 rounded">
+        <Link
+          to="/login"
+          className="flex flex-col items-start justify-center bg-orange-400 border-black p-1 hover:bg-green-500 transition-colors duration-300 rounded"
+        >
           Iniciar Sesión
         </Link>
       );
     }
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0 && open) {
+        setOpen(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [open]);
 
   return (
     <div className="w-full h-20 bg-white border-b-[1px] border-b-gray-800 font-titleFont sticky top-0 z-50">
@@ -50,21 +71,39 @@ const Header = () => {
             />
           </div>
         </Link>
-        <div className="flex items-center gap-8">
-          <ul className="flex items-center gap-8">
-            <Link to="/">
-              <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
+        <div className="flex items-center gap-4">
+          <ul className="hidden md:flex items-center gap-4">
+            <Link to="/" onClick={handleMenuClick}>
+              <li
+                className={`text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 text-center ${
+                  open ? "flex justify-center" : ""
+                }`}
+              >
+                <span className="decoration-[1px] bg-gradient-to-r from-black to-transparent bg-repeat-x bg-center"></span>
                 Inicio
+                <span className="decoration-[1px] bg-gradient-to-r from-black to-transparent bg-repeat-x bg-center"></span>
               </li>
             </Link>
-            <a href="/#products-section">
-              <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
+            <a href="/#products-section" onClick={handleMenuClick}>
+              <li
+                className={`text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 text-center ${
+                  open ? "flex justify-center" : ""
+                }`}
+              >
+                <span className="decoration-[1px] bg-gradient-to-r from-black to-transparent bg-repeat-x bg-center"></span>
                 Productos
+                <span className="decoration-[1px] bg-gradient-to-r from-black to-transparent bg-repeat-x bg-center"></span>
               </li>
             </a>
-            <a href="#footer-section">
-              <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
+            <a href="#footer-section" onClick={handleMenuClick}>
+              <li
+                className={`text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 text-center ${
+                  open ? "flex justify-center" : ""
+                }`}
+              >
+                <span className="decoration-[1px] bg-gradient-to-r from-black to-transparent bg-repeat-x bg-center"></span>
                 Contacto
+                <span className="decoration-[1px] bg-gradient-to-r from-black to-transparent bg-repeat-x bg-center"></span>
               </li>
             </a>
           </ul>
@@ -87,11 +126,93 @@ const Header = () => {
                 onClick={handleLogout}
                 className="cursor-pointer flex flex-col justify-center items-center ml-2"
               >
-                <GrLogout className="text-xl" />
+                <GrLogout className="text-xl ml-1 mr-1" />
               </div>
             )}
           </div>
+          <button className="md:hidden mr-4" onClick={handleMenuClick}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
         </div>
+      </div>
+      {open && (
+        <div
+          className="md:hidden bg-gray-600/50 min-h-screen w-full fixed top-0 left-0 right-0 backdrop-blur-sm"
+          onClick={handleMenuClick}
+        ></div>
+      )}
+      <div
+        className={`md:hidden ${
+          open ? "w-60 h-screen" : "h-0"
+        } bg-slate-400 fixed transform origin-top right-0 top-0 overflow-y-auto transition-all duration-300`}
+      >
+        <div className={`md:hidden ${!open && "hidden"} grid gap-4 pt-3 gap`}>
+          <button
+            className="mr-4 text-white mb-14"
+            onClick={handleMenuClick}
+          ></button>
+          <Link to="/" onClick={handleMenuClick}>
+            <li
+              className={`text-2xl text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 text-center ${
+                open ? "flex justify-center" : ""
+              }`}
+            >
+              Inicio
+            </li>
+          </Link>
+          <a href="/#products-section" onClick={handleMenuClick}>
+            <li
+              className={`text-2xl text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 text-center ${
+                open ? "flex justify-center" : ""
+              }`}
+            >
+              Productos
+            </li>
+          </a>
+          <a href="#footer-section" onClick={handleMenuClick}>
+            <li
+              className={`text-2xl text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 text-center ${
+                open ? "flex justify-center" : ""
+              }`}
+            >
+              Contacto
+            </li>
+          </a>
+        </div>
+        {open && (
+          <button
+            className="md:hidden fixed top-2 right-2"
+            onClick={handleMenuClick}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-8 h-8"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        )}
       </div>
     </div>
   );

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import ProductsCard from './ProductsCard';
 
 const Products = ({ products }) => {
-  
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('Todos');
 
@@ -14,22 +13,18 @@ const Products = ({ products }) => {
     if (category === 'Todos') {
       setFilteredProducts(products);
     } else {
-      const filteredProducts = products.filter(
-        (item) => item.category === category
-      );
+      const filteredProducts = products.filter((item) => item.category === category);
       setFilteredProducts(filteredProducts);
     }
     setSelectedCategory(category);
   };
 
   return (
-    <div className='py-10'>
-      <div id="products-section" className='flex flex-col items-center gap-4'>
-        <h1 className='text-2xl bg-black text-white py-2 w-80 text-center'>
-          Productos
-        </h1>
-        <span className='w-20 h-[3px] bg-black'></span>
-        <ul className='flex items-center gap-8'>
+    <div className="py-10">
+      <div id="products-section" className="flex flex-col items-center gap-4">
+        <h1 className="text-2xl bg-black text-white py-2 w-80 text-center">Productos</h1>
+        <span className="w-20 h-[3px] bg-black"></span>
+        <ul className="flex flex-wrap justify-center items-center gap-8 ml-2 mr-2">
           <li
             className={`text-base font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 ${
               selectedCategory === 'Todos' ? 'text-red-500' : 'text-black'
@@ -52,7 +47,7 @@ const Products = ({ products }) => {
             }`}
             onClick={() => handleFilter('Monturas')}
           >
-            Mascotas
+            Monturas
           </li>
           <li
             className={`text-base font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 ${
@@ -60,7 +55,7 @@ const Products = ({ products }) => {
             }`}
             onClick={() => handleFilter('Mascotas')}
           >
-            Monturas
+            Mascotas
           </li>
           <li
             className={`text-base font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 ${
@@ -86,10 +81,9 @@ const Products = ({ products }) => {
           >
             Tiempo de Juego
           </li>
-          {/* Resto de las categorías */}
         </ul>
       </div>
-      <div className='max-w-screen-xl mx-auto py-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-10'>
+      <div className="max-w-screen-xl mx-auto py-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-10">
         {filteredProducts.map((item) => (
           <ProductsCard key={item.id} product={item} />
         ))}

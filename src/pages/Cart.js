@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import CartItem from "../components/CartItem";
 import { ToastContainer, toast } from "react-toastify";
-import StripeCheckout from "react-stripe-checkout";
-import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
+import { resetCart } from "../redux/shopSlice";
+import { RotatingLines } from "react-loader-spinner";
 
 const Cart = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const productData = useSelector((state) => state.shop.productData);
   const userInfo = useSelector((state) => state.shop.userInfo);
   const [totalAmt, setTotalAmt] = useState("");
   const [payNow, setPayNow] = useState(false);
+  const [successMsg, setSuccessMsg] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     let price = 0;
@@ -22,83 +27,93 @@ const Cart = () => {
 
   const handleCheckout = () => {
     if (userInfo) {
-      setPayNow(true);
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+        setSuccessMsg("¡Felicidades por tu compra, volvamos al inicio!");
+        dispatch(resetCart());
+        setTimeout(() => {
+          navigate("/");
+        }, 5000);
+      }, 2000);
     } else {
       toast.error("Por favor inicia sesión para pagar");
     }
   };
 
-  const payment = async (token) => {
-    await axios.post("http://localhost:8000/pay", {
-      amount: totalAmt * 100,
-      token: token,
-    });
-  };
-
   return (
     <div>
-      <img
-        className="w-full h-60 object-cover"
-        src="https://res.cloudinary.com/dvvzlx2na/image/upload/v1687567333/World%20of%20Warcraft%20-%20Items/Imagenes-variadas/Cart-WOW_tkttpo.webp"
-        alt="cartImg"
-      />
-      <div className="max-w-screen-xl mx-auto py-20 flex">
-        <CartItem />
-        <div className="w-1/3 bg-[#fafafa] py-6 px-4">
-          <div className="flex flex-col gap-6 border-b-[1px] border-b-gray-400 pb-6">
-            <h2 className="text-2xl font-medium">Carrito de compras</h2>
-            <p className="flex items-center gap-4 text-base">
-              Subtotal{" "}
-              <span className="font-titleFont font-bold text-lg">
-                ${totalAmt}
-              </span>
-            </p>
-            <p className="flex items-start gap-4 text-base">
-              Beneficios{" "}
-              <span>
-              Contribuimos con el 2% del valor total de tu compra para llevar alimentos a los niños huerfanos de Ventormenta.
-              </span>
-            </p>
-          </div>
-          <p className="font-titleFont font-semibold flex justify-between mt-6">
-            {" "}
-            Total <span className="text-xl font-bold">${totalAmt}</span>
+      {successMsg ? (
+        <div className="w-full flex justify-center items-center py-60">
+          <p className="border-[1px] border-green-600 text-green-500 font-titleFont text-lg font-semibold px-6 py-2">
+            {successMsg}
           </p>
-          {productData.length > 0 && (
-            <button
-              onClick={handleCheckout}
-              className="text-base bg-black text-white w-full py-3 mt-6 hover:bg-gray-800 duration-300"
-            >
-              Continuar
-            </button>
-          )}
-          {payNow && productData.length > 0 && (
-            <div className="w-full mt-6 flex items-center justify-center">
-              <StripeCheckout
-                stripeKey="pk_test_51NMbHaBsWxh2JeIEnp5HEy2V6ktpkQVWmdjGjCWr77wmoosYyx1efJZe3pwrZuMvuZWxWcW8tC9jmgytdKX6J2IC00fgMXD0qw"
-                name="WOW Shop"
-                amount={totalAmt * 100}
-                label="Ir a Pagar"
-                description={`El monto a pagar es $${totalAmt}`}
-                token={payment}
-                email={userInfo.email}
-              />
-            </div>
-          )}
         </div>
-      </div>
-      <ToastContainer
-        position="top-left"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
+      ) : (
+        <>
+          <img
+            className="w-full h-60 object-cover"
+            src="https://res.cloudinary.com/dvvzlx2na/image/upload/v1687567333/World%20of%20Warcraft%20-%20Items/Imagenes-variadas/Cart-WOW_tkttpo.webp"
+            alt="cartImg"
+          />
+          <div className="max-w-screen-xl mx-auto py-20 flex">
+            <CartItem />
+            <div className="w-1/3 bg-[#fafafa] py-6 px-4">
+              <div className="flex flex-col gap-6 border-b-[1px] border-b-gray-400 pb-6">
+                <h2 className="text-2xl font-medium">Carrito de compras</h2>
+                <p className="flex items-center gap-4 text-base">
+                  Subtotal{" "}
+                  <span className="font-titleFont font-bold text-lg">
+                    ${totalAmt}
+                  </span>
+                </p>
+                <p className="flex items-start gap-4 text-base">
+                  Beneficios{" "}
+                  <span>
+                    Contribuimos con el 2% del valor total de tu compra para
+                    llevar alimentos a los niños huérfanos de Ventormenta.
+                  </span>
+                </p>
+              </div>
+              <p className="font-titleFont font-semibold flex justify-between mt-6">
+                Total <span className="text-xl font-bold">${totalAmt}</span>
+              </p>
+
+              {productData.length > 0 && (
+                <button
+                  onClick={handleCheckout}
+                  className="text-base bg-black text-white w-full py-3 mt-6 hover:bg-gray-800 duration-300"
+                >
+                  Pagar
+                </button>
+              )}
+              {loading && (
+                <div className="flex justify-center">
+                  <RotatingLines
+                    strokeColor="brown"
+                    strokeWidth="5"
+                    animationDuration="0.75"
+                    width="50"
+                    visible={true}
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+          <ToastContainer
+            position="top-left"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+          />
+        </>
+      )}
     </div>
   );
 };
