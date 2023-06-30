@@ -74,8 +74,8 @@ export const Login = () => {
     }
   };
   return (
-    <div className="w-full">
-      <div className="w-full pt-20 pb-20">
+    <div className="w-full pt-32">
+      <div className="w-full pb-32">
         {successMsg ? (
           <div className="w-full flex justify-center items-center py-32">
             <p className="border-[1px] border-green-600 text-green-500 font-titleFont text-lg font-semibold px-6 py-2">
@@ -84,8 +84,8 @@ export const Login = () => {
             </p>{" "}
           </div>
         ) : (
-          <form className="w-[350px] mx-auto flex flex-col items-center bg-gray-300">
-            <div className="w-full border border-zinc-200 p-6">
+          <form className="w-[350px] mx-auto flex flex-col items-center bg-orange-50 p-2 border border-orange-800 rounded-t-2xl">
+            <div className="w-full border border-orange-900 p-6 rounded-t-2xl">
               <h2 className="font-titleFont text-3xl font-medium mb-4">
                 Iniciar Sesión
               </h2>
@@ -142,7 +142,7 @@ export const Login = () => {
                 </div>
                 <button
                   onClick={handleLogin}
-                  className="w-full py-1.5 mt-4 text-sm font-normal rounded-sm bg-gradient-to-t from-slate-200 to-slate-100 hover:bg-gradient-to-b border border-zinc-400 active:border-yellow-800"
+                  className="w-full py-1.5 mt-4 text-sm font-normal rounded-sm bg-gradient-to-t from-orange-500 to-orange-300 hover:from-orange-600 hover:to-orange-400 border border-orange-900 active:border-yellow-800"
                 >
                   Conectar
                 </button>
@@ -160,12 +160,12 @@ export const Login = () => {
               </div>
             </div>
             <p className="w-full text-xs text-gray-600 mt-4 flex items-center">
-              <span className="w-1/3 h-[1px] bg-zinc-400 inline-flex"></span>
+              <span className="w-1/3 h-[1px] bg-orange-900  inline-flex"></span>
               <span className="w-1/3 text-center">¿No tenes cuenta?</span>
-              <span className="w-1/3 h-[1px] bg-zinc-400 inline-flex"></span>
+              <span className="w-1/3 h-[1px] bg-orange-900  inline-flex"></span>
             </p>
             <Link className="w-full" to="/registration">
-              <button className="w-full py-1.5 mt-4 text-sm font-normal rounded-sm bg-gradient-to-t from-slate-200 to-slate-100 hover:bg-gradient-to-b border border-zinc-400 active:border-yellow-800">
+              <button className="w-full py-1.5 mt-4 text-sm font-normal rounded-sm bg-gradient-to-t from-orange-500 to-orange-300 hover:from-orange-600 hover:to-orange-400 border border-orange-900 active:border-yellow-800">
                 Registrate
               </button>
             </Link>

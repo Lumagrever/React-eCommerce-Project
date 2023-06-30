@@ -30,7 +30,7 @@ const Header = () => {
   const renderUserInfo = () => {
     if (userInfo) {
       return (
-        <span className="flex flex-col items-start justify-center bg-orange-400 border-black p-1 hover:bg-green-500 transition-colors duration-300 rounded select-none">
+        <span className="flex flex-col items-start justify-center text-orange-50 bg-red-950 border-black p-1 hover:bg-orange-700 transition-colors duration-300 rounded select-none">
           {userInfo.userName}
         </span>
       );
@@ -38,7 +38,7 @@ const Header = () => {
       return (
         <Link
           to="/login"
-          className="flex flex-col items-start justify-center bg-orange-400 border-black p-1 hover:bg-green-500 transition-colors duration-300 rounded"
+          className="flex flex-col items-start justify-center text-orange-50 bg-red-950 border-black p-1 hover:bg-orange-700 transition-colors duration-300 rounded"
         >
           Iniciar Sesión
         </Link>
@@ -60,7 +60,7 @@ const Header = () => {
   }, [open]);
 
   return (
-    <div className="w-full h-20 bg-white border-b-[1px] border-b-gray-800 font-titleFont sticky top-0 z-50">
+    <div className="w-full h-20 bg-orange-50 border-b-[1px] border-b-gray-800 font-titleFont sticky top-0 z-50">
       <div className="max-w-screen-xl h-full mx-auto flex items-center justify-between">
         <Link to="/">
           <div>
@@ -126,7 +126,7 @@ const Header = () => {
                 onClick={handleLogout}
                 className="cursor-pointer flex flex-col justify-center items-center ml-2"
               >
-                <GrLogout className="text-xl ml-1 mr-1" />
+                <GrLogout className="text-2xl ml-1 mr-1 hover:scale-125 transition-all duration-300" />
               </div>
             )}
           </div>
@@ -157,7 +157,7 @@ const Header = () => {
       <div
         className={`md:hidden ${
           open ? "w-60 h-screen" : "h-0"
-        } bg-slate-400 fixed transform origin-top right-0 top-0 overflow-y-auto transition-all duration-300`}
+        } bg-orange-50 fixed transform origin-top right-0 top-0 overflow-y-auto transition-all duration-300`}
       >
         <div className={`md:hidden ${!open && "hidden"} grid gap-4 pt-3 gap`}>
           <button

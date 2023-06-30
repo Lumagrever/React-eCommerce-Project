@@ -130,8 +130,8 @@ const Registration = () => {
   return (
     <div className="w-full">
       <div className="w-full pt-20 pb-20">
-        <form className="w-[370px] mx-auto flex flex-col items-center">
-          <div className="w-full border border-zinc-200 p-6">
+        <form className="w-[370px] mx-auto flex flex-col items-center g-orange-50 p-2 border border-orange-800 rounded-t-2xl bg-orange-50">
+          <div className="w-full border border-orange-900 p-6 rounded-t-2xl">
             <h2 className="font-titleFont text-3xl font-medium mb-4">
               Zona de Registro
             </h2>
@@ -215,7 +215,7 @@ const Registration = () => {
               </div>
               <button
                 onClick={handleRegistration}
-                className="w-full py-1.5 mt-4 text-sm font-normal rounded-sm bg-gradient-to-t from-slate-200 to-slate-100 hover:bg-gradient-to-b border border-zinc-400 active:border-yellow-800"
+                className="w-full py-1.5 mt-4 text-sm font-normal rounded-sm bg-gradient-to-t from-orange-500 to-orange-300 hover:from-orange-600 hover:to-orange-400 border border-orange-900 active:border-yellow-800"
               >
                 Continuar
               </button>
