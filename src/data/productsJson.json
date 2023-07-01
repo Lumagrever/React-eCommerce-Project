@@ -2,7 +2,7 @@
     {
       "id": 1,
       "title": "World of Warcraft®: Dragonflight",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592671/World%20of%20Warcraft%20-%20Items/Productos/Games/World_of_Warcraft_Dragonflight_eeson3.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688231282/World%20of%20Warcraft%20-%20Items/Productos/Games/World_of_Warcraft_Dragonflight-Recortado_cgn0rw.png",
       "desc": "Une tus fuerzas con los Vuelos de Azeroth en su regreso a las Islas Dragón, un reino perdido de magia y maravillas. Allí aguardan los evocadores dracthyr, una raza y clase jugable totalmente nueva de dragonantes listos para unirse a las filas de la Horda y la Alianza.",
       "isNew": true,
       "oldPrice": "$6000",
@@ -12,7 +12,7 @@
     {
       "id": 3,
       "title": "World of Warcraft Classic",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592671/World%20of%20Warcraft%20-%20Items/Productos/Games/World_of_Warcraft_Classic_dm4vuj.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688231582/World%20of%20Warcraft%20-%20Items/Productos/Games/World_of_Warcraft_Classic-Recortado_dbic01.png",
       "desc": "Únete a millones de jugadores y entra a un mundo de mitos, magia y aventura sin fin. Con una suscripción única puedes acceder a World of Warcraft y WoW Classic, que incluye Wrath of the Lich King Classic.",
       "isNew": true,
       "oldPrice": "$6000",
@@ -32,7 +32,7 @@
     {
       "id": 5,
       "title": "Cuervo aterrador",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592675/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Cuervo_Aterrador_wdlfcs.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688232126/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Cuervo_Aterrador-Recortado.png",
       "desc": "El cuervo aterrador, miembro de la estirpe de un antiguo dios que se volvió loco, busca redimir el legado mancillado de su antepasado transportando a los héroes de Azeroth por distintos mundos sobre sus oscuras alas.",
       "isNew": true,
       "oldPrice": "$2500",
@@ -52,7 +52,7 @@
     {
       "id": 7,
       "title": "Permavermis embrujado",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592675/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Permavermis_Embrujado_p27y4y.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688239005/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Permavermis_Embrujado-Recortado_y64jpk.png",
       "desc": "Vuela por los cielos como un rayo a lomos de la vermis eterna embrujada, una criatura majestuosa hecha de ánima fluida en estado puro. La silla de esta montura puede invocar al viajero eterno, un misterioso ser que te ofrecerá una misión en la que podrás obtener un conjunto de transfiguración: las vestimentas del viajero eterno.",
       "price": 2500,
       "category": "Monturas"
@@ -60,7 +60,7 @@
     {
       "id": 8,
       "title": "Corazón de los Aspectos",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592675/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Coraz%C3%B3n_de_los_Aspectos_yzzfgc.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688238726/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Coraz%C3%B3n_de_los_Aspectos-Recortado_bk3yh7.png",
       "desc": "Al realizar un ataque desde el aire, lo mejor es avanzar hasta la batalla con el Sol a tus espaldas para cegar a tu enemigo… ¡aunque también puedes usar una montura que sea tan luminosa como mil estrellas!",
       "price": 2500,
       "category": "Monturas"
@@ -76,7 +76,7 @@
     {
       "id": 10,
       "title": "Acechador vil illidari",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592675/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Acechador_vil_Illidari_lymfyv.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688232367/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Acechador_vil_Illidari-Recortado_sghqgz.png",
       "desc": "Acechad a las monstruosidades en los confines más oscuros de los mundos a lomos del salvaje acechador vil Illidari. Esta bestia despiadada escapó del yugo de sus antiguos amos demoníacos y cumplirá vuestras órdenes sin rechistar cuando marchéis hacia la batalla.",
       "price": 2500,
       "category": "Monturas"
@@ -92,7 +92,7 @@
     {
       "id": 12,
       "title": "Atracacielos Férreo",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592674/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Atracacielos_F%C3%A9rreo_tv6pxe.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688239097/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Atracacielos_F%C3%A9rreo-Recortado_ulfzb3.png",
       "desc": "Criado para la guerra por los maestros de la Horda de Hierro, y equipado con el acero negro más resistente, este monstruo volador solo puede ser amaestrado por los jinetes más intrépidos. Al igual que un llameante cometa que vaticina la destrucción abrasadora, caerás de los cielos sobre tus enemigos a lomos de esta épica montura para comenzar tu campaña de conquista.",
       "price": 2500,
       "category": "Monturas"
@@ -100,7 +100,7 @@
     {
       "id": 13,
       "title": "Yun, el Suertudo",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686875789/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Yun_el_suertudo_uymbiy.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688232591/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Yun_el_suertudo-fotor-Recortado_n8rwby.png",
       "desc": "¿Necesitas que la fortuna te sonría? ¡Estás de suerte! Los ancianos pandaren aseguran que Yun el Afortunado concederá prosperidad a quien toque su reluciente piel. Agarra a este buey por los cuernos y prepárate para tener buena fortuna en Azeroth y otros parajes.",
       "price": 2500,
       "category": "Monturas"
@@ -108,7 +108,7 @@
     {
       "id": 14,
       "title": "Cazaestrellas radiante",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592674/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Cazaestrellas_Radiante_tehpet.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688232823/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Cazaestrellas_Radiante-Recortado_a52a6n.png",
       "desc": "Va a ser un viaje colorido Aprovechando el vacío cambiante, lo vil y las energías de otros mundos que lo rodean, la montura buscaestelar luminoso os permite viajar con clase a lomos de sus tonos ondulados. Agarraos bien, porque esta bestia policromática volará tan rápido como vuestra habilidad en equitación se lo permita.",
       "price": 2500,
       "category": "Monturas"
@@ -124,7 +124,7 @@
     {
       "id": 16,
       "title": "Gran vermis atiborrado abisal",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592675/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Gran_Vermis_atiborrado_Abisal_jxcx7m.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688232941/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Gran_Vermis_atiborrado_Abisal-Recortado_h2fjtb.png",
       "desc": "La gran vermis atiborrada de esencia abisal, rebosante de energía Arcana, te llevará hasta los confines más lejanos del plano existencial donde se desarrollen tus aventuras. Embárcate junto a ella en un viaje electrizante y descubre nuevas fuentes de delicioso poder Arcano por el camino.",
       "price": 2500,
       "category": "Monturas"
@@ -156,7 +156,7 @@
     {
       "id": 20,
       "title": "Incinerador metalescama",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592675/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Incinerador_metalescama_neih0z.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688233177/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Incinerador_metalescama-Recortado_fqtgls.png",
       "desc": "El imponente incinerador escamavapor es un roboterror chispeante que reina en los cielos cuando echa a volar. Cuenta la leyenda que un inventor gnomo loco soñaba con montar en un dragón, así que creó este monstruo de metal con un demonio atrapado para darle energía y poder crear un «alma de dragón auténtica».",
       "price": 2500,
       "category": "Monturas"
@@ -172,7 +172,7 @@
     {
       "id": 22,
       "title": "Soñador silvano",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592676/World%20of%20Warcraft%20-%20Items/Productos/Monturas/So%C3%B1ador_Silvano_jqmtgp.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688233297/World%20of%20Warcraft%20-%20Items/Productos/Monturas/So%C3%B1ador_Silvano-fotor-Recortado_vn5qaq.png",
       "desc": "Una artista en la ciudad mágica de Dalaran se quedó dormida sobre su pincel y soñó que dibujaba un bello dragón con plumas. Su obra salió del lienzo y la artista, al despertar, vio al soñador de Sylveria durmiendo apaciblemente a su lado.",
       "price": 2500,
       "category": "Monturas"
@@ -180,7 +180,7 @@
     {
       "id": 23,
       "title": "Medrana",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592676/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Medrana_avyv1n.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688233553/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Medrana-Recortado_b9l2wt.png",
       "desc": "Sube a bordo de un barco sin igual capaz de flotar gracias al favor de un desconocido dios de las profundidades con rostro de kraken.",
       "price": 2500,
       "category": "Monturas"
@@ -188,7 +188,7 @@
     {
       "id": 24,
       "title": "Cazador de fase veridiano",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592674/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Cazador_de_fase_Veridiano_g8xviu.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688233880/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Cazador_de_fase_Veridiano-Recortado.png",
       "desc": "El astuto cazador de fase viridiano ha evolucionado en las ruinas de Draenor y ahora está listo para explorar nuevas tierras a tu lado. Acarícialo con cariño mientras te lleva por Azeroth y más allá en busca de nuevas aventuras y manjares.",
       "price": 2500,
       "category": "Monturas"
@@ -196,7 +196,7 @@
     {
       "id": 25,
       "title": "Familiar vulpino",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592675/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Familiar_Vulpino_mlv2rd.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688234040/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Familiar_Vulpino-Recortado_kpof0o.png",
       "desc": "Dotado de una gran inteligencia y de una curiosidad insaciable, esta raza de zorro ha viajado por la Gran Oscuridad del Más Allá para buscar la compañía de los héroes más grandes de Azeroth. Los compañeros vulpinos son temerarios por naturaleza, y cualquiera de ellos será un acompañante fantástico para tus aventuras en Azeroth y más allá.",
       "price": 2500,
       "category": "Monturas"
@@ -204,7 +204,7 @@
     {
       "id": 26,
       "title": "Tormento de Guerra",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592676/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Tormento_de_Guerra_t1jj44.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688238592/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Tormento_de_Guerra-Recortado_axltif.png",
       "desc": "¡Entra en la batalla a lomos de un Tormento de Guerra y siembra el caos más devastador entre tus enemigos! Este aterrador corcel, forjado en frío acero y espíritus vengativos por las manos de grandes maestros herreros, te permite establecer un Amarradero de tormento.",
       "price": 2500,
       "category": "Monturas"
@@ -212,7 +212,7 @@
     {
       "id": 27,
       "title": "Wen Lo, el colmillo del río",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592677/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Wen_Lo__el_colmillo_del_R%C3%ADo_jpkyl7.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688234239/World%20of%20Warcraft%20-%20Items/Productos/Monturas/Wen_Lo__el_colmillo_del_R%C3%ADo-fotor-Recortado_mrqkbj.png",
       "desc": "Hazte con el ojo del tigre cuando te subas a la silla de montar de Wen Lo, Orilla del Río, una temible montura que te ayudará a disfrutar de la emoción del vuelo durante tus peripecias por Azeroth. Gracias al coraje forjado por las impredecibles aguas de Pandaria, ¡Wen Lo te llevará donde quieras para vivir tus aventuras!",
       "price": 2500,
       "category": "Monturas"
@@ -220,7 +220,7 @@
     {
       "id": 28,
       "title": "Can de Trasiego de Alterac",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592673/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Can_de_Trasiego_de_Alterac_szfa6k.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688234351/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Can_de_Trasiego_de_Alterac-Recortado_j3khon.png",
       "desc": "Descendiente de una larga estirpe de caninos de rescate de pedigrí, el Can de trasiego de Alterac tiene un olfato único para encontrar a los aventureros en peligro, perdidos en las altas montañas de Alterac.",
       "isNew": true,
       "oldPrice": "$2000",
@@ -240,7 +240,7 @@
     {
       "id": 30,
       "title": "Argi",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592671/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Argi_dn0bp6.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688234606/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Argi-Recortado_jdyucp.png",
       "isNew": true,
       "desc": "Si buscas una compañera que te salte al corazón y mordisquee tus calcetines, esta pequeña viajera interestelar busca un lugar al que llamar hogar. Iluminará el camino con sus cuernos naaru, escalará, nadará y correrá a tu lado allá a donde quieras ir. ¡Adopta hoy mismo a esta revoltosa y pequeñaja rumiante!",
       "oldPrice": "$2000",
@@ -260,7 +260,7 @@
     {
       "id": 32,
       "title": "Anciano Floreciente",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592671/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Anciano_Floreciente_brn8x5.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688235272/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Anciano_Floreciente-Recortado_vi35zz.png",
       "desc": "Surgidos desde la semilla de un Ancestro, estos vivaces retoños están destinados a sanar Azeroth de los destrozos causados por La Devastación. Adopta a uno, cuídalo, y serás recompensado con alegría durante todo el año. Al comienzo de cada temporada, el Anciano floreciente cambiará, trayendo nueva vida a sus alrededores.",
       "isNew": true,
       "oldPrice": "$2000",
@@ -270,7 +270,7 @@
     {
       "id": 33,
       "title": "Pata brillante",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592674/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Pata_Brillante_ku1s0o.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688235161/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Pata_Brillante-Recortado_kd4na6.png",
       "desc": "Esta radiante gatita tiene tanta energía extra que a veces necesita desfogarla por ahí seguida de un rastro de magia Arcana. Tanto si os estáis adentrando en una mazmorra como si estáis cazando mariposas, zarpa de Luz irá correteando a vuestro lado.",
       "price": 2000,
       "category": "Mascotas"
@@ -278,7 +278,7 @@
     {
       "id": 34,
       "title": "Capitán Galleta",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592672/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Capit%C3%A1n_Galleta_khpbb6.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688235690/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Capit%C3%A1n_Galleta-Recortado_g5jqch.png",
       "desc": "Engánchate al capitán Pastas y navega en busca de nuevas aventuras. Llévatelo a casa hoy mismo y no te decepcionARRRá. Los chistes malos de piRRRRatas no están incluidos.",
       "price": 2000,
       "category": "Mascotas"
@@ -286,7 +286,7 @@
     {
       "id": 35,
       "title": "Gatito de Ceniza",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592676/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Gatito_de_Ceniza_bpw6lt.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688236038/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Gatito_de_Ceniza-Recortado_ij1ffc.png",
       "desc": "Combinando el encanto de un cachorrito y el ardiente magma del plano elemental de Fuego, el Gatito de ceniza es una de las mascotas que más te calentará el corazón con su llegada. Regala uno a cada miembro de tu banda y transforma las noches de raid en una incendiaria reunión de gatitos.",
       "price": 2000,
       "category": "Mascotas"
@@ -294,7 +294,7 @@
     {
       "id": 36,
       "title": "Margarita",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592672/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Margarita_nby8jq.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688236191/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Margarita-Recortado_qy5cdp.png",
       "desc": "Os presentamos a Margarita, una de las perezosas más dignas de Azeroth. Entre batalla y batalla, tomaos el tiempo necesario para apreciar el mundo a su ritmo. Y cuando volváis a sentir la llamada de la aventura, solo tenéis que hacerle /señas, y se subirá encantada a vuestros hombros para disfrutar de un agradable paseo.",
       "price": 2000,
       "category": "Mascotas"
@@ -302,7 +302,7 @@
     {
       "id": 37,
       "title": "Doti",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592673/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Doti_uen7b3.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688236288/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Doti-Recortada_p58tz2.png",
       "desc": "Nacida en algún lugar entre los picos de Vol'dun, Doti busca aventuras más allá de las dunas. Se dedica a explorar sin descanso nuevos horizontes mientras luce el peinado más a la moda de Azeroth.",
       "price": 2000,
       "category": "Mascotas"
@@ -318,7 +318,7 @@
     {
       "id": 39,
       "title": "Mini Ragnaros",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592674/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Mini_Ragnaros_rx8pvw.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688236526/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Mini_Ragnaros-Recortado_folyia.png",
       "desc": "Prende fuego a tus compañeros de hermandad con el pequeño señor elemental conocido como Mini Ragnaros, no sólo te puede servir como infiernillo para tus barbacoas, sino también para quemar a las alimañas que se acerquen demasiado a su ardiente cuerpo.",
       "price": 2000,
       "category": "Mascotas"
@@ -326,7 +326,7 @@
     {
       "id": 40,
       "title": "Mini Ursoc",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592673/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Mini_Ursoc_mrnxxu.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688236675/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Mini_Ursoc-Recortado_bloquo.png",
       "desc": "Antes de convertirse en un poderoso protector de Azeroth como uno de los dioses salvajes, Ursoc fue un cachorro juguetón que deambulaba con curiosidad por las Colinas Pardas. Forma equipo con este diminuto oso valeroso y tendrás un compañero audaz y leal para las aventuras más salvajes.",
       "price": 2000,
       "category": "Mascotas"
@@ -334,7 +334,7 @@
     {
       "id": 41,
       "title": "Cachorro Quilen de la Suerte",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592673/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Cachorro_Quilen_de_la_Suerte_nsb06c.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688236823/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Cachorro_Quilen_de_la_Suerte-Recortado_xeni5z.png",
       "desc": "Puede que los cachorros de quilen de la suerte parezcan estatuas dotadas de vida, pero su pellejo duro como la roca alberga un corazón afectuoso. Estos leales compañeros cuidarán de ti y seguirán fielmente cada uno de tus pasos... y puede que te traigan suerte mientras tanto.",
       "price": 2000,
       "category": "Mascotas"
@@ -342,7 +342,7 @@
     {
       "id": 42,
       "title": "Travesuras",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592673/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Travesuras_kmryjg.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688237074/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Travesuras-Recortado_vruvfc.png",
       "desc": "Si estáis buscando un gatito curioso para adoptar, a esta adorable bolita de pelo de Legion le encantaría irse a casa con vosotros. Tanto para salir de aventuras como para calentaros junto a una fogata vil, Engañifo estará a vuestro lado todo el rato, ronroneando... ¡y sin planear la aniquilación de todo Azertoth! Claro...",
       "price": 2000,
       "category": "Mascotas"
@@ -350,7 +350,7 @@
     {
       "id": 43,
       "title": "Mordiscos",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592673/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Mordiscos_ubw0sx.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688237236/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Mordiscos-Recortado_asf6pn.png",
       "desc": "Mordiscos fue criado para rastrear a los enemigos de la Legión Ardiente, pero lo apartaron de esa siniestra vida con una sabrosa golosina. No temáis, nunca se apartará de vuestro lado, ¡solo quiere seguiros a todas partes y dejarse acariciar!",
       "price": 2000,
       "category": "Mascotas"
@@ -358,7 +358,7 @@
     {
       "id": 44,
       "title": "Sombra",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592674/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Sombra_p2bu2b.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688237324/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Sombra-Recortado_hlv1v6.png",
       "desc": "Este zorro juguetón, que se perdió en Argus y fue invadido por la oscuridad, solo puede evitar el vacío con vuestra compañía. Con sus adorables y descomunales orejas, trotará a vuestro lado en cada batalla.",
       "price": 2000,
       "category": "Mascotas"
@@ -366,7 +366,7 @@
     {
       "id": 45,
       "title": "Alma de los Aspectos",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592673/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Alma_de_los_Aspectos_rltk60.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688237415/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Alma_de_los_Aspectos-Recortado_klck3k.png",
       "desc": "Tu nueva y fiel mascota de compañía, el Alma de los Aspectos volará a tu lado por los cielos de Azeroth, celebrando juntos vuestras victorias con verdaderas acrobacias aéreas.",
       "price": 2000,
       "category": "Mascotas"
@@ -374,7 +374,7 @@
     {
       "id": 46,
       "title": "Tortu",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592674/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Tortu_fk0uhs.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688237541/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Tortu-Recortado_pao19w.png",
       "desc": "¡Poned rumbo hacia nuevas aventuras con Tortu a vuestro lado! Esta inquieta cría tortoliana se muere de ganas de buscar los tesoros del mundo y hará que cualquier expedición sea memorable.",
       "price": 2000,
       "category": "Mascotas"
@@ -382,7 +382,7 @@
     {
       "id": 47,
       "title": "Crepúsculo",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592672/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Crep%C3%BAsculo_dakqtt.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688237625/World%20of%20Warcraft%20-%20Items/Productos/Mascotas/Crep%C3%BAsculo-Recortado_ukagci.png",
       "desc": "Esta criaturita adorable está impaciente por acurrucarse en la hoguera tras la última campaña. Cautivará a vuestros camaradas con un pelaje cromático que cambia de color y se hará un huequecito en el núcleo de vuestra colección… ¡Además, es una luchadora excelente! ¡Adoptad a esta monada hoy mismo!",
       "price": 2000,
       "category": "Mascotas"
@@ -416,7 +416,7 @@
     {
       "id": 51,
       "title": "Alas de duende dardo",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592678/World%20of%20Warcraft%20-%20Items/Productos/Transfiguraciones/Alas_de_duende_dardo_pwrhh1.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688237848/World%20of%20Warcraft%20-%20Items/Productos/Transfiguraciones/Alas_de_duende_dardo-Recortado_ljhs2j.png",
       "desc": "Cautiva a tus amigos y seduce a tus enemigos con este conjunto de transfiguración de ocho piezas inspirado en los dragones hada de Azeroth. Este aspecto cuenta con alas cosméticas y una cautivadora máscara que atraerá todas las miradas y dejará sin aliento a aliados, enemigos y dragones.",
       "price": 3000,
       "category": "Transfiguraciones"
@@ -440,7 +440,7 @@
     {
       "id": 54,
       "title": "Cambio de Nombre",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592676/World%20of%20Warcraft%20-%20Items/Productos/Servicios-de-juego/Cambio_de_Nombre_wf4gti.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688238013/World%20of%20Warcraft%20-%20Items/Productos/Servicios-de-juego/Cambio_de_Nombre-Recortado_b4l2dv.png",
       "desc": "El nombre que escogiste originalmente para tu personaje no tiene por qué mantenerse para toda la eternidad. ¿Has cambiado de idea o, simplemente, se te ha ocurrido algo mejor? Sea cual sea el caso, puedes escoger un nuevo nombre y reinventarte hoy mismo.",
       "isNew": true,
       "oldPrice": "$3500",
@@ -450,7 +450,7 @@
     {
       "id": 55,
       "title": "Subida de personaje a nivel 60",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592677/World%20of%20Warcraft%20-%20Items/Productos/Servicios-de-juego/Subida_de_personaje_a_nivel_60_wcaoev.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688238092/World%20of%20Warcraft%20-%20Items/Productos/Servicios-de-juego/Subida_de_personaje_a_nivel_60-Recortada_npwsoz.png",
       "desc": "En el viaje de todo héroe llega un momento en el que necesita un pequeño empujón para salir del bache y volver a la acción. Ahora puedes regalar a un personaje una subida única hasta el nivel 60 para llevar tus aventuras a nuevas cotas sin perder un instante.",
       "isNew": true,
       "oldPrice": "$3500",
@@ -488,7 +488,7 @@
     {
       "id": 59,
       "title": "Tiempo de juego",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592675/World%20of%20Warcraft%20-%20Items/Productos/Servicios-de-juego/Tiempo_de_juego_wazajb.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688238183/World%20of%20Warcraft%20-%20Items/Productos/Servicios-de-juego/Tiempo_de_juego-Recortado_cw4n3g.png",
       "desc": "Únete a millones de jugadores y entra a un mundo de mitos, magia y aventura sin fin. Con una compra de tiempo de juego puedes acceder a World of Warcraft y WoW Classic, que incluye Wrath of the Lich King Classic.",
       "price": 3500,
       "category": "Servicio de Juego"
@@ -504,7 +504,7 @@
     {
       "id": 61,
       "title": "Servicios de Hermandad",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592678/World%20of%20Warcraft%20-%20Items/Productos/Servicios-de-juego/Servicios_de_Hermandad_secqij.webp",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688238254/World%20of%20Warcraft%20-%20Items/Productos/Servicios-de-juego/Servicios_de_Hermandad-Recortado_p6jhif.png",
       "desc": "Después de tantas aventuras y desventuras juntos, tu hermandad y tú podríais necesitar algún cambio. Puede ser un simple cambio de nombre de la hermandad o dar un paso mayor como cambiar de facción o reino, abriendo un camino hacia nuevos desafíos y futuras glorias.",
       "price": 3500,
       "category": "Servicio de Juego"
@@ -519,10 +519,10 @@
     },
     {
       "id": 63,
-      "title": "WOW® Suscripción Trimestral",
-      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1686592678/World%20of%20Warcraft%20-%20Items/Productos/Tiempo-de-juego/World_of_Warcraft__Oferta_de_suscripci%C3%B3n_especial_hcllkp.webp",
+      "title": "WOW® Suscripción Semestral",
+      "img": "https://res.cloudinary.com/dvvzlx2na/image/upload/v1688238471/World%20of%20Warcraft%20-%20Items/Productos/Servicios-de-juego/World_of_Warcraft__Oferta_de_suscripci%C3%B3n_especial-Recortado_kgpval.png",
       "desc": "Únete a millones de jugadores y entra a un mundo de mitos, magia y aventura sin fin. Con una suscripción única puedes acceder a World of Warcraft y WoW Classic, que incluye Wrath of the Lich King Classic.",
-      "price": 4000,
+      "price": 7000,
       "category": "Tiempo de Juego"
     }
 ]

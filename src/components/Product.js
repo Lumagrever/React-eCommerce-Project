@@ -19,13 +19,13 @@ const Product = () => {
       <div className="flex flex-col md:flex-row gap-10">
         <div className="w-full md:w-2/5 relative">
           <img
-            className="w-full h-auto md:h-[550px] object-cover"
+            className="w-full h-auto md:h-[550px] object-cover rounded-2xl"
             src={details.img}
             alt="productImg"
           />
           <div className="absolute top-4 right-0">
             {details.isNew && (
-              <p className="bg-black text-orange-600 font-semibold font-titleFont px-6 py-2">
+              <p className="bg-black text-orange-600 font-semibold font-titleFont px-6 py-2 rounded-full">
                 <ImFire />
               </p>
             )}
@@ -36,7 +36,7 @@ const Product = () => {
             <h2 className="text-3xl md:text-4xl font-semibold">{details.title}</h2>
             <div className="flex items-center gap-4 mt-3">
               <p className="line-through font-base text-gray-500">
-                ${details.oldPrice}
+                {details.oldPrice}
               </p>
               <p className="text-2xl font-medium text-gray-900">
                 ${details.price}
