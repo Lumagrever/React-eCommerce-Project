@@ -65,8 +65,8 @@ const Header = () => {
         <Link to="/">
           <div>
             <img
-              className="w-20"
-              src="https://res.cloudinary.com/dvvzlx2na/image/upload/v1686628645/World%20of%20Warcraft%20-%20Items/Logo/World-of-Warcraft-Simple-Logo_jt0bpw.png"
+              className="w-36 max-sm:w-24"
+              src="https://res.cloudinary.com/dvvzlx2na/image/upload/v1688156943/World%20of%20Warcraft%20-%20Items/Logo/WoW_DF_logo_bronze-PhotoRoom.png-PhotoRoom_tsprp3.png"
               alt="logoWow"
             />
           </div>
@@ -119,7 +119,7 @@ const Header = () => {
               </span>
             </div>
           </Link>
-          <div className="flex items-center">
+          <div className="flex items-center text-center">
             {renderUserInfo()}
             {userInfo && (
               <div

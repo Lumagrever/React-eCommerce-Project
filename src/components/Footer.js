@@ -6,9 +6,9 @@ import {
   FaYoutube,
   FaHome,
 } from "react-icons/fa";
-import { ImGithub } from "react-icons/im";
 import { MdLocationOn } from "react-icons/md";
-import { BsPersonFill, BsPaypal } from "react-icons/bs";
+import { BsCartPlusFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -29,10 +29,10 @@ const Footer = () => {
             alt="PayMethods"
           />
           <div className="flex gap-5 text-lg text-gray-400">
-            <FaYoutube className="hover:text-white duration-300 cursor-pointer" />
-            <FaFacebookF className="hover:text-white duration-300 cursor-pointer" />
-            <FaTwitter className="hover:text-white duration-300 cursor-pointer" />
-            <FaInstagram className="hover:text-white duration-300 cursor-pointer" />
+            <a href="https://www.youtube.com/@WorldofWarcraftLATAM"><FaYoutube className="hover:text-white duration-300 cursor-pointer" /></a>
+            <a href="https://www.facebook.com/Warcraft/?locale=es_LA"><FaFacebookF className="hover:text-white duration-300 cursor-pointer" /></a>
+            <a href="https://twitter.com/WarcraftLATAM"><FaTwitter className="hover:text-white duration-300 cursor-pointer" /></a>
+            <a href="https://www.instagram.com/warcraft/?hl=es"><FaInstagram className="hover:text-white duration-300 cursor-pointer" /></a>
           </div>
         </div>
         <div>
@@ -46,20 +46,16 @@ const Footer = () => {
         <div>
           <h2 className="text-2xl font-semibold text-white mb-4">Perfil</h2>
           <div className="flex flex-col gap-2 text-base">
-            <p className="flex items-center gap-3 hover:text-white duration-300 cursor-pointer">
+          <Link to="/cart">
+          <p className="flex items-center gap-3 hover:text-white duration-300 cursor-pointer">
               {" "}
               <span>
-                <BsPersonFill />
+                <BsCartPlusFill />
               </span>
-              {""}Mi cuenta
+              {""}Carrito
             </p>
-            <p className="flex items-center gap-3 hover:text-white duration-300 cursor-pointer">
-              {" "}
-              <span>
-                <BsPaypal />
-              </span>
-              {""}Checkout
-            </p>
+          </Link>
+          <a href="https://us.battle.net/support/es/help">
             <p className="flex items-center gap-3 hover:text-white duration-300 cursor-pointer">
               {" "}
               <span>
@@ -67,6 +63,7 @@ const Footer = () => {
               </span>
               {""}Soporte
             </p>
+            </a>
           </div>
         </div>
         <div className="flex flex-col justify-center">
@@ -75,7 +72,7 @@ const Footer = () => {
             placeholder="e-mail"
             type="text"
           />
-          <button className="text-sm border text-white border-t-0 hover:bg-gray-900 active:bg-white active:text-black">
+          <button className="w-full text-black font-bold text-sm rounded-sm bg-gradient-to-t from-orange-500 to-orange-300 hover:from-orange-600 hover:to-orange-400 border border-orange-900 active:border-yellow-800 rounded-b-2xl">
             Suscribite
           </button>
         </div>

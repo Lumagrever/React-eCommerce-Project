@@ -22,7 +22,7 @@ const Cart = () => {
       price += item.price * item.quantity;
       return price;
     });
-    setTotalAmt(price.toFixed(2));
+    setTotalAmt(price);
   }, [productData]);
 
   const handleCheckout = () => {
@@ -52,7 +52,7 @@ const Cart = () => {
       ) : (
         <>
           <img
-            className="w-full h-60 object-cover"
+            className="w-full h-60 object-cover max-md:hidden"
             src="https://res.cloudinary.com/dvvzlx2na/image/upload/v1687567333/World%20of%20Warcraft%20-%20Items/Imagenes-variadas/Cart-WOW_tkttpo.webp"
             alt="cartImg"
           />
