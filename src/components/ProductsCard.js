@@ -79,7 +79,7 @@ const ProductsCard = ({ product }) => {
           )}
         </div>
       </div>
-      <ToastContainer
+      <ToastContainer className="max-sm:w-2/3"
         position="top-left"
         autoClose={3000}
         hideProgressBar={false}
