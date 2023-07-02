@@ -110,7 +110,7 @@ const CartItem = () => {
       </Link>
       <ToastContainer className="max-sm:w-2/3"
         position="top-left"
-        autoClose={3000}
+        autoClose={1500}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
