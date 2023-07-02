@@ -22,14 +22,14 @@ const ProductsCard = ({ product }) => {
     });
   };
   return (
-    <div className="px-2 roun">
+    <div className="px-2">
     <div className="group relative">
       <div
         onClick={handleDetails}
         className="w-full h-64 md:h-96 cursor-pointer overflow-hidden rounded-t-2xl"
       >
         <img
-          className="w-full h-full object-cover group-hover:scale-105 duration-500"
+          className="w-full h-full object-cover max-sm:h-80 max-md: group-hover:scale-105 duration-500"
           src={product.img}
           alt="productImg"
         />

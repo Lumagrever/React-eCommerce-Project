@@ -19,17 +19,17 @@ const Banner = () => {
   return (
     <div className='w-full h-auto overflow-hidden'>
         <div className='w-screen lg:h-[450px] xl:h-[550px] relative'>
-            <div style={{transform: `translateX(-${currentSlide * 100}vw)`}} className='w-[300vw] h-full flex transition-transform duration-1000'>
-                <img className=" max-md:hidden w-screen h-full object-cover" src={data[0]} alt="ImgOne" loading="priority"/>
-                <img className=" max-md:hidden w-screen h-full object-cover" src={data[1]} alt="ImgTwo"/>
-                <img className=" max-md:hidden w-screen h-full object-cover" src={data[2]} alt="ImgThree"/>
+            <div style={{transform: `translateX(-${currentSlide * 100}vw)`}} className='w-[300vw] flex transition-transform duration-1000'>
+                <img className=" max-md:hidden w-screen h-full object-contain" src={data[0]} alt="ImgOne" loading="priority"/>
+                <img className=" max-md:hidden w-screen h-full object-contain" src={data[1]} alt="ImgTwo"/>
+                <img className=" max-md:hidden w-screen h-full object-contain" src={data[2]} alt="ImgThree"/>
                 <img id='banner-mov'
             className=" hidden w-screen h-full object-contain max-md:block "
             src="https://res.cloudinary.com/dvvzlx2na/image/upload/v1688173833/World%20of%20Warcraft%20-%20Items/Sliders/WoW_SummerSale2023_Bnet_HeaderMobile_928x40045_oankch.jpg"
             alt="cartImg"
           />
             </div>
-          <div className="max-md:hidden h-0 absolute w-full mx-auto flex justify-center bottom-8 lg:bottom-16 xl:bottom-20 gap-8">
+          <div className="max-md:hidden w-full mx-auto flex justify-center bottom-8 lg:bottom-28 xl:bottom-32 gap-8 absolute inset-x-0">
           <div
             onClick={prevSlide}
             className="w-14 h-12 max-lg:w-8 max-lg:h-8 border-[1px] bg-black border-gray-700 flex items-center justify-center hover:cursor-pointer hover:bg-gray-700 hover:text-white active:bg-gray-900 duration-300"
