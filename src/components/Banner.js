@@ -29,7 +29,7 @@ const Banner = () => {
             alt="cartImg"
           />
             </div>
-          <div className="max-md:hidden w-full mx-auto flex justify-center bottom-8 lg:bottom-28 xl:bottom-32 gap-8 absolute inset-x-0">
+          <div className="max-md:hidden w-full mx-auto flex justify-center bottom-8 lg:bottom-28 xl:bottom-32 gap-8 absolute inset-x-0 h-1">
           <div
             onClick={prevSlide}
             className="w-14 h-12 max-lg:w-8 max-lg:h-8 border-[1px] bg-black border-gray-700 flex items-center justify-center hover:cursor-pointer hover:bg-gray-700 hover:text-white active:bg-gray-900 duration-300"
