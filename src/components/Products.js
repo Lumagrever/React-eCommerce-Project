@@ -4,6 +4,7 @@ import ProductsCard from './ProductsCard';
 const Products = ({ products }) => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('Todos');
+  const [visibleProductCount, setVisibleProductCount] = useState(8);
 
   useEffect(() => {
     setFilteredProducts(products);
@@ -17,7 +18,18 @@ const Products = ({ products }) => {
       setFilteredProducts(filteredProducts);
     }
     setSelectedCategory(category);
+    setVisibleProductCount(8);
   };
+
+  const handleLoadMore = () => {
+    setVisibleProductCount((prevCount) => prevCount + 8);
+  };
+
+  const handleLoadLess = () => {
+    setVisibleProductCount((prevCount) => Math.max(prevCount - 8, 8));
+  };
+
+  const canLoadMore = visibleProductCount < filteredProducts.length;
 
   return (
     <div className="py-10">
@@ -84,9 +96,27 @@ const Products = ({ products }) => {
         </ul>
       </div>
       <div className="max-w-screen-xl mx-auto py-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-10">
-        {filteredProducts.map((item) => (
+        {filteredProducts.slice(0, visibleProductCount).map((item) => (
           <ProductsCard key={item.id} product={item} />
         ))}
+      </div>
+      <div className="flex justify-center">
+        {canLoadMore ? (
+          <button
+            className="text-black font-bold text-sm rounded-sm bg-gradient-to-t from-orange-500 to-orange-300 hover:from-orange-600 hover:to-orange-400 border border-orange-900 active:border-yellow-800 rounded-b-2xl py-2 px-4 mr-4"
+            onClick={handleLoadMore}
+          >
+            Ver más
+          </button>
+        ) : null}
+        {visibleProductCount > 8 ? (
+          <button
+            className="text-black font-bold text-sm bg-gradient-to-t from-orange-500 to-orange-300 hover:from-orange-600 hover:to-orange-400 border border-orange-900 active:border-yellow-800 rounded-b-2xl py-2 px-4 rounded-sm"
+            onClick={handleLoadLess}
+          >
+            Ver menos
+          </button>
+        ) : null}
       </div>
     </div>
   );
